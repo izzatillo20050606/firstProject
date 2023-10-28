@@ -8,14 +8,15 @@ class ProfilePagre extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Galereya"),
+        title:  Text("Galereya"),
       ),
-      body: const Center(
+      body:  Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("I'm Galeraya"),
-            SizedBox(height: 150),
+            SizedBox(height: 15),
+            Image.asset("assets/rasmmmmmmmmm.jpg"),
             Text("Salom"),
           ],
         ),
