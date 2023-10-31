@@ -1,36 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/GaleryPage.dart/GaleryPage.dart';
+// import 'package:lesson_navigator/pages/settings/setting_page.dart';
 
-class ProfilePagre extends StatelessWidget {
-  const ProfilePagre({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  static const route = "/profile";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Galereya"),
+        backgroundColor: Colors.teal,
+        foregroundColor: Colors.yellow,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.red,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Text("Profile Page"),
       ),
-      body:  Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("I'm Galeraya"),
-            SizedBox(height: 15),
-            Image.asset("assets/rasmmmmmmmmm.jpg"),
-            Text("Salom"),
+            const Icon(Icons.abc),
+            const Icon(Icons.abc),
+            const Icon(Icons.abc),
+            const Icon(Icons.abc),
+            IconButton(
+              onPressed: () {
+                // Navigator.pushNamed(context, SettingPage.route);
+              },
+              icon: const Icon(Icons.settings),
+            ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => OxirgiPage(),
-              ));
-          debugPrint("Tap");
-        },
-        child: const Icon(Icons.navigate_next_outlined),
       ),
     );
   }
